@@ -42,7 +42,7 @@ from desktop.lib.exceptions_renderable import PopupException
 from desktop.lib.i18n import smart_unicode
 from desktop.models import Document
 
-from jobsub.parameterization import find_variables
+from beeswax.parameterization import find_variables
 
 import beeswax.forms
 import beeswax.design
