@@ -281,10 +281,7 @@ def unsupported(request):
   return render('unsupported.mako', request, None)
 
 def index(request):
-  if request.user.is_superuser and request.COOKIES.get('hueLandingPage') != 'home':
-    return redirect(reverse('about:index'))
-  else:
-    return home(request)
+  return home(request)
 
 def serve_404_error(request, *args, **kwargs):
   """Registered handler for 404. We just return a simple error"""
