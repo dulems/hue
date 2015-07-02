@@ -185,7 +185,8 @@ def edit_user(request, username=None):
   if username is not None:
     instance = User.objects.get(username=username)
   else:
-    instance = None
+    username = request.user.username
+    instance = User.objects.get(username=username)
 
   if request.user.is_superuser:
     form_class = SuperUserChangeForm

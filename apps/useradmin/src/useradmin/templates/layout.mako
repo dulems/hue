@@ -60,9 +60,9 @@ def is_selected(section, matcher):
                 </a>
               </li>
               %if user.is_superuser:
-              <li class="${is_selected(section, 'users')}"><a href="/useradmin/users">${_('Users')}</a></li>
-				      <li class="${is_selected(section, 'groups')}"><a href="/useradmin/groups">${_('Groups')}</a></li>
-				      <li class="${is_selected(section, 'permissions')}"><a href="/useradmin/permissions">${_('Permissions')}</a></li>
+              <li class="${is_selected(section, 'users')} invisible"><a href="/useradmin/users">${_('Users')}</a></li>
+				      <li class="${is_selected(section, 'groups')} invisible"><a href="/useradmin/groups">${_('Groups')}</a></li>
+				      <li class="${is_selected(section, 'permissions')} invisible"><a href="/useradmin/permissions">${_('Permissions')}</a></li>
               %endif
             </ul>
           </div>
