@@ -102,7 +102,7 @@ class HDFStemporaryUploadedFile(object):
                       'Please cleanup manually: %s' % (self._path, ex))
 
   def write(self, data):
-    self._file.write(data)
+    self._file.overwrite(data)
 
   def flush(self):
     self._file.flush()
@@ -133,7 +133,7 @@ class HDFSfileUploadHandler(FileUploadHandler):
     self._destination = request.GET.get('dest', None) # GET param avoids infinite looping
     self.request = request
     # Need to directly modify FileUploadHandler.chunk_size
-    FileUploadHandler.chunk_size = UPLOAD_CHUNK_SIZE.get()
+    FileUploadHandler.chunk_size = 2 * 1024 * 1024 * 1024
 
   def new_file(self, field_name, file_name, *args, **kwargs):
     # Detect "HDFS" in the field name.
