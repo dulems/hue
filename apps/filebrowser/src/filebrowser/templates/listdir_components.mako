@@ -994,12 +994,12 @@ from django.utils.translation import ugettext as _
           self.targetPath("${url('filebrowser.views.view', path=urlencode('/'))}" + "." + stripHashes(file.path));
           location.hash = stripHashes(file.path);
         } else {
-          location.href = file.url;
+          location.href = "${url('filebrowser.views.download', path=urlencode('/'))}" + stripHashes(file.path);
         }
       };
 
       self.editFile = function () {
-        location.href = "${url('filebrowser.views.edit', path=urlencode('/'))}" + self.selectedFile().path;
+        location.href = "${url('filebrowser.views.download', path=urlencode('/'))}" + self.selectedFile().path;
       };
 
       self.downloadFile = function () {
