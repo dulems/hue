@@ -1289,6 +1289,7 @@ from django.utils.translation import ugettext as _
           onSubmit:function (id, fileName, responseJSON) {
             num_of_pending_uploads++;
           },
+          sizeLimit: 1024 * 1024 * 1024,
           debug:false
         });
 
@@ -1337,6 +1338,7 @@ from django.utils.translation import ugettext as _
           onSubmit:function (id, fileName, responseJSON) {
             num_of_pending_uploads++;
           },
+          sizeLimit: 1024 * 1024 * 1024,
           debug:false
         });
 

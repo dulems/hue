@@ -325,6 +325,7 @@
                 '<a class="qq-upload-cancel" href="#">' + labels.CANCEL + '</a>' +
                 '<span class="qq-upload-failed-text">' + labels.FAILED + '</span>' +
                 '</li>',
+            sizeLimit: 1024 * 1024 * 1024,
             debug:false
         });
     }
