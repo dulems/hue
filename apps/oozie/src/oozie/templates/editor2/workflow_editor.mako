@@ -109,39 +109,11 @@ ${ layout.menubar(section='workflows', is_editor=True, pullright=buttons) }
          <a class="draggable-icon"><img src="${ static('oozie/art/icon_beeswax_48.png') }" class="app-icon"></a>
     </div>
 
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableHive2Action(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableHive2Action());}}}"
-         title="${_('HiveServer2 Script')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><img src="${ static('oozie/art/icon_beeswax_48.png') }" class="app-icon"><sup style="color: #338bb8; margin-left: -4px; top: -14px; font-size: 12px">2</sup></a>
-    </div>
-
     <div data-bind="css: { 'draggable-widget': true},
                     draggable: {data: draggablePigAction(), isEnabled: true,
                     options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggablePigAction());}}}"
          title="${_('Pig Script')}" rel="tooltip" data-placement="top">
          <a class="draggable-icon"><img src="${ static('oozie/art/icon_pig_48.png') }" class="app-icon"></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableSparkAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableSparkAction());}}}"
-         title="${_('Spark program')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><img src="${ static('oozie/art/icon_spark_48.png') }" class="app-icon"></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableJavaAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableJavaAction());}}}"
-         title="${_('Java program')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-file-code-o"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableSqoopAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableSqoopAction());}}}"
-         title="${_('Sqoop 1')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><img src="${ static('oozie/art/icon_sqoop_48.png') }" class="app-icon"></a>
     </div>
 
     <div data-bind="css: { 'draggable-widget': true },
@@ -156,48 +128,6 @@ ${ layout.menubar(section='workflows', is_editor=True, pullright=buttons) }
                     options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableSubworkflowAction());}}}"
          title="${_('Sub workflow')}" rel="tooltip" data-placement="top">
          <a class="draggable-icon"><i class="fa fa-code-fork"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableShellAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableShellAction());}}}"
-         title="${_('Shell')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-terminal"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableSshAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableSshAction());}}}"
-         title="${_('Ssh')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-tty"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableFsAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableFsAction());}}}"
-         title="${_('HDFS Fs')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-file-o"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableEmailAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableEmailAction());}}}"
-         title="${_('Email')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-envelope-o"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableStreamingAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableStreamingAction());}}}"
-         title="${_('Streaming')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-exchange"></i></a>
-    </div>
-
-    <div data-bind="css: { 'draggable-widget': true },
-                    draggable: {data: draggableDistCpAction(), isEnabled: true,
-                    options: {'refreshPositions': true, 'stop': function(){ $root.isDragging(false); }, 'start': function(event, ui){ $root.isDragging(true); $root.currentlyDraggedWidget(draggableDistCpAction());}}}"
-         title="${_('Distcp')}" rel="tooltip" data-placement="top">
-         <a class="draggable-icon"><i class="fa fa-files-o"></i></a>
     </div>
 
     <div data-bind="css: { 'draggable-widget': true },
